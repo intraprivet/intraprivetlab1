@@ -30,7 +30,7 @@ hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
 
 
-add_library(hello1 STATIC
+add_library(lab1 STATIC
   
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
 )
@@ -47,7 +47,7 @@ target_include_directories(tests
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_link_libraries(tests GTest::main hello1)
+target_link_libraries(tests GTest::main lab1)
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests) 
