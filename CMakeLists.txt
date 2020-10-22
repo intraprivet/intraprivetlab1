@@ -30,7 +30,7 @@ hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
 
 
-add_library(lab1 STATIC
+add_library(hello1 STATIC
   
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
 )
@@ -40,14 +40,14 @@ add_executable(tests
 )
 
 
-target_include_directories(lab1
+target_include_directories(hello1
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 target_include_directories(tests 
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_link_libraries(tests GTest::main lab1)
+target_link_libraries(tests GTest::main hello1)
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests) 
@@ -57,7 +57,7 @@ if(BUILD_COVERAGE)
   list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
   find_package(codecov)
   
-  add_coverage(lab1)
+  add_coverage(hello1)
   add_coverage(tests)
   list(APPEND LCOV_REMOVE_PATTERNS "'${PROJECT_SOURCE_DIR}/tests/*'")
   coverage_evaluate()
