@@ -1,7 +1,8 @@
 // Copyright 2020 Alex Pushkin pushkin.alexsandt@gmail.com
 #include <iostream>
 int main()
-{char  s;
+{
+ char  s;
  std::cout << "write symbol: ";
  std::cin >> s ;
  std::cout << "\n"; //empty string
