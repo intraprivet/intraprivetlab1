@@ -1,5 +1,6 @@
 // Copyright 2020 Alex Pushkin pushkin.alexsandt@gmail.com
-#include <cstdio>             // подключаем заголовочный файл iostream
+#include <cstdio>
+#include <iostream>   
 int main()                          // определяем функцию main
 {                                   // начало функции
     std::cout << "Hello World!";  // выводим строку на консоль
